@@ -303,14 +303,8 @@ a
       margin-top: 2em
   .plans__grid
     flex-flow: column
-
-@media all and (max-width: 1000px)
-  .features
-    &__grid
-
-      &__item
-        width: 100%
-        max-width: 500px
+    &__item:nth-child(2)
+      transform: translateY(0)
 
 @media all and (max-width: 700px)
 
@@ -331,3 +325,12 @@ a
 
   .logo
     margin: 1em auto
+
+@media all and (max-width: 1000px)
+  .features
+    &__grid
+
+      &__item
+        width: 100%
+        max-width: 500px
+
