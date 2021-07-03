@@ -12,6 +12,7 @@ interface Queue {
     [uuid: string]: Function
 }
 
+
 export default class DiceInterface {
 
     server: Server;
@@ -20,8 +21,8 @@ export default class DiceInterface {
     sendQueue: Queue = {}
     buffer: number[] = []
 
-    constructor(port = 3456) {
-        this.server = new Server({port});
+    constructor(httpServer: any) {
+        this.server = new Server({server: httpServer});
         this.server.on('listening', () => {
             console.log('Listening for websockets')
         })
