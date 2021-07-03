@@ -11,7 +11,7 @@
                 <nav class="header__nav">
                     <a class="header__nav__item" href="#heading"><i class="fa fa-home"></i> Home</a>
                     <a class="header__nav__item" href="#features"><i class="fa fa-list"></i> Features</a>
-                    <a class="header__nav__item" href="#"><i class="fa fa-book"></i> Docs</a>
+                    <a class="header__nav__item" href="#docs"><i class="fa fa-book"></i> Docs</a>
                     <a class="header__nav__item" href="#pricing"><i class="fa fa-money-bill-wave-alt"></i> Pricing</a>
                 </nav>
             </header>
@@ -37,7 +37,6 @@
                     random numbers.
                 </p>
             </div>
-
             <div class="features__grid__item slide">
                 <i class="fa fa-network-wired features__grid__item__icon"></i>
                 <h2 class="features__grid__item__title">Easy API</h2>
@@ -46,7 +45,6 @@
                     algorithms and security out there to your clients!
                 </p>
             </div>
-
             <div class="features__grid__item slide">
                 <i class="fa fa-key features__grid__item__icon"></i>
                 <h2 class="features__grid__item__title">Secure</h2>
@@ -55,10 +53,24 @@
                     which we achieve by rolling the dice <b>in house</b>!
                 </p>
             </div>
-
         </div>
         <div>
             <a href="#" class="learn-more slide">Learn More</a>
+        </div>
+        <div class="section docs" id="docs">
+            <h1 class="section__title slide">Our API</h1>
+            <p class="section__desc slide">
+                We have an easy to use API so you can get your secure random numbers with ease.
+            </p>
+            <div class="docs__item slide">
+                <h2 class="docs__item__name">Generating a number</h2>
+                <div class="docs__item__header">
+                    <span class="docs__item__header__method">GET</span>
+                    <span class="docs__item__header__path">/api/random</span>
+                </div>
+                <p class="docs__item__text">To authenticate with our number generator you need to provide your
+                    api token in the authentication header. Using no header will result in the free plan being used</p>
+            </div>
         </div>
         <div class="section pricing" id="pricing">
             <h1 class="section__title slide">Our pricing plans</h1>
@@ -117,7 +129,8 @@
                             <span class="plans__grid__item__price__unit">/per 5 rolls</span>
                         </h1>
                         <p class="plans__grid__item__desc">
-                            Perfectly meet all of your company's randomization needs. Give your company the edge in security.</p>
+                            Perfectly meet all of your company's randomization needs. Give your company the edge in
+                            security.</p>
                         <ul class="plans__grid__item__features">
                             <li class="plans__grid__item__features__item">
                                 <i class="fa fa-check plans__grid__item__features__item__icon"></i>
@@ -160,7 +173,7 @@
                             <span class="plans__grid__item__price__unit">/month</span>
                         </h1>
                         <p class="plans__grid__item__desc">Great for large organizations that need lots of highly secure
-                            military grade randomization.</p>
+                            military grade randomization. </p>
                         <ul class="plans__grid__item__features">
                             <li class="plans__grid__item__features__item">
                                 <i class="fa fa-check plans__grid__item__features__item__icon"></i>
@@ -198,7 +211,17 @@
                 </div>
             </div>
         </div>
+
     </div>
+    <footer class="footer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave wave--footer">
+            <path fill="#0c60ce" fill-opacity="1"
+                  d="M0,288L48,256C96,224,192,160,288,144C384,128,480,160,576,186.7C672,213,768,235,864,224C960,213,1056,171,1152,160C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+        <div class="footer__content">
+                <img class="footer__content__logo" src="https://qrls.host.qrl.nz/img/logo-text.svg" alt="QRL" width="200" height="200">
+        </div>
+    </footer>
 
     <script>
 
