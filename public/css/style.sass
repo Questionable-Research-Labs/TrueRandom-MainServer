@@ -111,9 +111,10 @@ a
   padding: 2em 1em
 
   &__grid
-    max-width: 1200px
-    display: grid
-    grid-template-columns: 1fr 1fr 1fr
+    display: flex
+    flex-flow: row
+    flex-wrap: wrap
+    justify-content: center
     margin: 2em auto
     padding: 5%
 
@@ -121,6 +122,7 @@ a
       position: relative
       max-width: 300px
       padding: 2em 1em
+      margin: 1em
       background: #f5f5f5
       //border-bottom: 2px solid lighten($primary, 10)
       text-align: center
@@ -144,3 +146,27 @@ a
         text-align: left
         padding: 0 1em
         line-height: 1.5
+
+@media all and (max-width: 900px)
+  .heading__block
+    flex-flow: column
+    &__tail
+      margin-top: 2em
+
+@media all and (max-width: 1000px)
+    .features
+      &__grid
+        grid-template-columns: 1fr
+        grid-gap: 1em
+        width: calc(100% - 4em)
+        &__item
+          width: 100%
+
+@media all and (max-width: 1200px)
+  .header__nav
+    flex-flow: column
+    width: 600px
+
+    &__item
+      width: 100%
+      max-width: 600px
