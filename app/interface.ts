@@ -78,7 +78,10 @@ export default class DiceInterface {
             callback(value);
         } else {
             this.sendQueue[uuid] = callback;
-            if (this.client != null) this.client.send(uuid)
+            if (this.client != null) {
+                this.client.send(uuid)
+                console.log('Printy')
+            }
         }
     }
 
