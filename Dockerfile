@@ -6,6 +6,9 @@ WORKDIR /usr/src/app
 
 COPY . .
 
+ENV PYTHON /usr/bin/python
+
+RUN apt-get update || : && apt-get install python2 -y && apt-get install python -y
 RUN npm install
 
 EXPOSE 8080
