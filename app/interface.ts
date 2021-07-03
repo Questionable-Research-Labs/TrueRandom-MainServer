@@ -22,6 +22,12 @@ export default class DiceInterface {
     sendQueue: Queue = {}
     buffer: number[] = []
 
+    requestBuffer() {
+        if (this.client != null) {
+            this.client.send(`!${BUFFER_SIZE}`)
+        }
+    }
+
     constructor(httpServer: any) {
         this.server = new Server({server: httpServer});
         this.server.on('listening', () => {
@@ -38,7 +44,7 @@ export default class DiceInterface {
                         if (data === SECURE_KEY) {
                             this.authenticated = true;
                             this.client = client
-                            client.send(`!${BUFFER_SIZE}`)
+                            this.requestBuffer()
                         } else {
                             client.close();
                             this.reset();
@@ -74,8 +80,8 @@ export default class DiceInterface {
         this.authenticated = false;
     }
 
-    queue(uuid: string, callback: Function) {
-        if (this.buffer.length > 0) {
+    queue(uuid: string, callback: Function, twitch: boolean = false) {
+        if (!twitch && this.buffer.length > 0) {
             const value = this.buffer.pop()
             callback(value);
         } else {
@@ -83,6 +89,7 @@ export default class DiceInterface {
             if (this.client != null) {
                 this.client.send(uuid)
             }
+            if (!twitch) this.requestBuffer()
         }
     }
 
