@@ -1,8 +1,9 @@
 import WebSocket, {Data, Server} from "ws";
+
 require('dotenv').config();
 
-const SECURE_KEY: string = process.env.SECURE_KEY ??''
-if(SECURE_KEY.length == 0) {
+const SECURE_KEY: string = process.env.SECURE_KEY ?? ''
+if (SECURE_KEY.length == 0) {
     console.error('NO SECURE_KEY');
     process.exit(1)
 }
@@ -36,6 +37,7 @@ export default class DiceInterface {
                     if (!this.authenticated) {
                         if (data === SECURE_KEY) {
                             this.authenticated = true;
+                            this.client = client
                             client.send(`!${BUFFER_SIZE}`)
                         } else {
                             client.close();
@@ -73,14 +75,13 @@ export default class DiceInterface {
     }
 
     queue(uuid: string, callback: Function) {
-        if (this.buffer.length  >0) {
+        if (this.buffer.length > 0) {
             const value = this.buffer.pop()
             callback(value);
         } else {
             this.sendQueue[uuid] = callback;
             if (this.client != null) {
                 this.client.send(uuid)
-                console.log('Printy')
             }
         }
     }
