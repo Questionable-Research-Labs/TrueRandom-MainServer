@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 import express, {Express, NextFunction, Request, Response} from "express"
 import rateLimit from "express-rate-limit"
 import * as path from "path";
@@ -8,6 +10,7 @@ import apiRouter from "../routes/api";
 import createError, {HttpError} from "http-errors";
 
 const ROOT_PATH = path.join(__dirname, '../')
+const RATE_BYPASS_KEY: string = process.env.RATE_BYPASS_KEY ?? 'RateBypass'
 
 export const web: Express = express();
 const logger = morgan('dev');
@@ -25,13 +28,18 @@ web.use(sassMiddleware({
     includePaths: [path.join(ROOT_PATH, 'node_modules')],
     outputStyle: 'compressed'
 }));
+
 web.use(express.static(path.join(ROOT_PATH, 'public')));
 web.use(logger);
 web.use('/', indexRouter);
 web.use('/api', rateLimit({
-    windowMs: 60 * 1000,
-    max: 1000
-}))
+    windowMs: 60 * 1000, // 1 minute
+    max: function (req: Request) {
+        // TODO: Plan based rate limiting
+        return 10;
+    },
+    skip: (req: Request) => req.headers.authorization === RATE_BYPASS_KEY
+}));
 web.use('/api', apiRouter);
 
 

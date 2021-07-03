@@ -1,7 +1,5 @@
 import WebSocket, {Data, Server} from "ws";
 
-require('dotenv').config();
-
 const SECURE_KEY: string = process.env.SECURE_KEY ?? ''
 if (SECURE_KEY.length == 0) {
     console.error('NO SECURE_KEY');
