@@ -22,6 +22,9 @@ export default class DiceInterface {
 
     constructor(port = 3456) {
         this.server = new Server({port});
+        this.server.on('listening', () => {
+            console.log('Listening for websockets')
+        })
         this.server.on('connection', client => {
             if (this.client != null) {
                 // We already have a client connected get rid of them
