@@ -1,7 +1,8 @@
 <main class="main">
     <div class="heading" id="heading">
         <div class="heading__block">
-            <img class="heading__block__head logo slide" alt="True Random Logo" src="/img/logo.svg" width="400" height="300">
+            <img class="heading__block__head logo slide" alt="True Random Logo" src="/img/logo.svg" width="400"
+                 height="300">
             <p class="heading__block__tail slide">
                 The most powerful and secure random number algorithm you could ever want.
             </p>
@@ -54,8 +55,14 @@
                 </p>
             </div>
         </div>
-        <div>
-            <a href="#" class="learn-more slide">Learn More</a>
+        <div class="section preview" id="preview">
+            <h1 class="section__title slide">See it in action</h1>
+            <p class="section__desc slide">
+                Here's a video of our military grade randomization in action
+            </p>
+            <video class="preview__video" width="740" height="500" controls>
+                <source src="/video/preview.mp4" type="video/mp4">
+            </video>
         </div>
         <div class="section docs" id="docs">
             <h1 class="section__title slide">Our API</h1>
@@ -243,7 +250,7 @@
         function onScreen(element) {
             const elementTop = element.offsetTop;
             const elementHeight = element.offsetHeight;
-            const elementSize = elementTop + elementHeight/2
+            const elementSize = elementTop + elementHeight / 2
             const screenHeight = window.innerHeight;
             const screenScroll = window.scrollY;
             return (elementSize >= screenScroll && elementSize <= screenHeight + screenScroll)
