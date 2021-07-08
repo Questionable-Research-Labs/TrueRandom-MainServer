@@ -38,6 +38,9 @@ export default class DiceInterface {
             } else {
                 client.on('message', (data: Data) => {
                     const value = data.toString()
+                    if (value == "pong") {
+                        return
+                    }
                     if (!this.authenticated) {
                         if (data === SECURE_KEY) {
                             this.authenticated = true;
@@ -71,6 +74,12 @@ export default class DiceInterface {
                 client.on('close', () => this.reset())
             }
         });
+        setInterval(() => {
+            if (this.client != null) {
+                this.client.send("ping")
+            }
+        }, 4000);
+
     }
 
     reset() {
