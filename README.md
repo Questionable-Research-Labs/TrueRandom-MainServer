@@ -55,8 +55,8 @@ The following environment variables are optional
 
 | Variable           | Example | Explanation                           |
 |--------------------|---------|---------------------------------------|
-| RATE_BYPASS_KEY    | true    | A Key that can be provided to ignore rate limiting |
-| RATE_LIMIT_MINUTES | true    | The amount of minutes before rate limiting resets |
-| RATE_LIMIT_TOTAL   | true    |  The amount of requests to accept before rate limiting |
+| RATE_BYPASS_KEY    |         | A Key that can be provided to ignore rate limiting |
+| RATE_LIMIT_MINUTES | 10      | The amount of minutes before rate limiting resets |
+| RATE_LIMIT_TOTAL   | 1000    |  The amount of requests to accept before rate limiting |
 
 
