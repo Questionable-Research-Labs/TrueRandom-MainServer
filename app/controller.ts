@@ -31,6 +31,10 @@ class DiceNode {
     aliveTimeout: NodeJS.Timeout;
     connected: boolean = true;
 
+    close() {
+        this.ws.close()
+    }
+
     constructor(ws: WebSocket, onAuth: Function, onBuffer: BufferFunction, onResolved: ResolvedFunction) {
         this.ws = ws;
         this.aliveTimeout = setInterval(() => this.ws.send('ping'), KEEP_ALIVE_DELAY);
@@ -98,6 +102,7 @@ class DiceNode {
 
     getBuffer() {
         try {
+            console.log("Asking for buffer from node.")
             this.ws.send('!' + BUFFER_SIZE); // Send the buffer request packet to the client
         } catch (e) {
             console.error('[WebSocket] Unable to send buffer request: ' + e);
@@ -120,21 +125,21 @@ export default class DiceController {
         });
         this.wsServer.on('connection', wsClient => {
             if (this.node !== null) { // If we already have an active node
-                wsClient.close(); // Close the connection
+                this.node.close(); // Close the connection
                 // Warn the console
                 console.log('[WebSocket] Another node attempted to connect while there is already a node connected.');
-            } else {
-                const node: DiceNode = new DiceNode(wsClient,
-                    () => this.node = node, // If authenticated set as node
-                    (value: number) => this.buffer.push(value), // Add the new buffer value
-                    (uuid: string, value: number) => { // When data is resolved
-                        if (uuid in this.queue) { // Check that the uuid is still in the queue
-                            this.queue[uuid](value); // Resolve the queued function with the value
-                            delete this.queue[uuid]; // Remove the resolved item from the queue
-                        }
+            } 
+            const node: DiceNode = new DiceNode(wsClient,
+                () => this.node = node, // If authenticated set as node
+                (value: number) => this.buffer.push(value), // Add the new buffer value
+                (uuid: string, value: number) => { // When data is resolved
+                    if (uuid in this.queue) { // Check that the uuid is still in the queue
+                        this.queue[uuid](value); // Resolve the queued function with the value
+                        delete this.queue[uuid]; // Remove the resolved item from the queue
                     }
-                );
-            }
+                }
+            );
+            
         })
     }
 
