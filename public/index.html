@@ -22,269 +22,148 @@
     <title>TrueRandom | The most powerful random number generator</title>
 </head>
 <body>
-<main class="main">
-    <div class="heading" id="heading">
-        <div class="heading__block">
-            <img class="heading__block__head logo slide" alt="True Random Logo" src="img/logo.svg" width="400"
-                 height="300">
-            <p class="heading__block__tail slide">
-                The most powerful and secure random number algorithm you could ever want.
-            </p>
-        </div>
-        <div class="heading__block">
-            <header class="header">
-                <nav class="header__nav">
-                    <a class="header__nav__item" href="#heading"><i class="fa fa-home"></i> Home</a>
-                    <a class="header__nav__item" href="#features"><i class="fa fa-list"></i> Features</a>
-                    <a class="header__nav__item" href="#docs"><i class="fa fa-book"></i> Docs</a>
-                    <a class="header__nav__item" href="#pricing"><i class="fa fa-money-bill-wave-alt"></i> Pricing</a>
-                </nav>
-            </header>
-        </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave">
-            <path fill="#FFF" fill-opacity="1"
-                  d="M0,288L48,256C96,224,192,160,288,144C384,128,480,160,576,186.7C672,213,768,235,864,224C960,213,1056,171,1152,160C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
-    </div>
-    <div class="section features" id="features">
-        <h1 class="section__title slide">What we have to offer</h1>
-        <p class="section__desc slide">
-            We have both a great free and paid plans to give you the best numbers for your
-            money. All at fair and low prices.
+<div class="heading">
+    <video class="heading__video" muted loop autoplay>
+        <source src="video/preview.mp4" type="video/mp4">
+        Unable to load video
+    </video>
+    <div class="heading__content">
+        <img class="heading__content__logo" src="img/TrueRandomLogo.svg" alt="">
+        <p class="heading__content__text">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="32px" width="32px" fill="#FFFFFF"
+                 class="heading__content__text__quote" data-v-1cff2897="">
+                <path d="M0 0h24v24H0z" fill="none" data-v-1cff2897=""></path>
+                <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" data-v-1cff2897=""></path>
+            </svg>
+            TrueRandom is the end game solution when it comes to random number generation.
+            Providing its users with the most random and secure numbers.
         </p>
-        <div class="features__grid">
-            <div class="features__grid__item slide">
-                <i class="fa fa-dice features__grid__item__icon"></i>
-                <h2 class="features__grid__item__title">Real Random</h2>
-                <p class="features__grid__item__text">
-                    With our powerful, highly complex, dedicated <b>True-Random</b> algorithm you can always ensure you
-                    are getting unique
-                    random numbers.
-                </p>
-            </div>
-            <div class="features__grid__item slide">
-                <i class="fa fa-network-wired features__grid__item__icon"></i>
-                <h2 class="features__grid__item__title">Easy API</h2>
-                <p class="features__grid__item__text">
-                    With our easy to use, fast and always running <b>API</b> you can spend more time getting your
-                    algorithms and security out there to your clients!
-                </p>
-            </div>
-            <div class="features__grid__item slide">
-                <i class="fa fa-key features__grid__item__icon"></i>
-                <h2 class="features__grid__item__title">Secure</h2>
-                <p class="features__grid__item__text">
-                    We pride ourself on providing you with the most secure and truly random numbers that we can
-                    which we achieve by rolling the dice <b>in house</b>!
-                </p>
-            </div>
-        </div>
-        <div class="section preview" id="preview">
-            <h1 class="section__title slide">See it in action</h1>
-            <p class="section__desc slide">
-                Here's a video of our military grade randomization in action
-            </p>
-            <video class="preview__video" width="740" height="500" controls>
-                <source src="video/preview.mp4" type="video/mp4">
-                Unable to load video
-            </video>
-        </div>
-        <div class="section docs" id="docs">
-            <h1 class="section__title slide">Our API</h1>
-            <p class="section__desc slide">
-                We have an easy to use API so you can get your secure random numbers with ease.
-            </p>
-            <div class="docs__item slide">
-                <h2 class="docs__item__name">Generating a number</h2>
-                <div class="docs__item__header">
-                    <span class="docs__item__header__method">GET</span>
-                    <span class="docs__item__header__path">/api/random</span>
-                </div>
-                <p class="docs__item__text">To authenticate with our number generator you need to provide your
-                    api token in the authentication header. Using no header will result in the free plan being used</p>
-            </div>
-        </div>
-        <div class="section pricing" id="pricing">
-            <h1 class="section__title slide">Our pricing plans</h1>
-            <p class="section__desc slide">
-                We have lots of affordable plans for all your random number needs!
-            </p>
-            <div class="plans">
-                <div class="plans__grid">
-                    <div class="plans__grid__item slide">
-                        <i class="plans__grid__item__icon fa fa-user"></i>
-                        <h2 class="plans__grid__item__title">Personal</h2>
-                        <h1 class="plans__grid__item__price">
-                            Free
-                        </h1>
-                        <p class="plans__grid__item__desc">Ideal for anyone who wants to get secure military grade
-                            performance all from just one API</p>
-                        <ul class="plans__grid__item__features">
-                            <li class="plans__grid__item__features__item">
-                                <i class="fa fa-check plans__grid__item__features__item__icon"></i>
-                                2 Shakes per roll
-                            </li>
-                            <li class="plans__grid__item__features__item">
-                                <i class="fa fa-check plans__grid__item__features__item__icon"></i>
-                                5/request per hour rate limit
-                            </li>
-                            <li class="plans__grid__item__features__item">
-                                <i class="fa fa-check plans__grid__item__features__item__icon"></i>
-                                Military grade randomization
-                            </li>
-                            <li class="plans__grid__item__features__item">
-                                <i class="fa fa-check plans__grid__item__features__item__icon"></i>
-                                API
-                            </li>
-                            <li class="plans__grid__item__features__item">
-                                <i class="fa fa-check plans__grid__item__features__item__icon"></i>
-                                Free!
-                            </li>
-                            <li class="plans__grid__item__features__item">
-                                <i class="fa fa-times plans__grid__item__features__item__icon"></i>
-                                Free cake
-                            </li>
-                            <li class="plans__grid__item__features__item">
-                                <i class="fa fa-times plans__grid__item__features__item__icon"></i>
-                                Free ducks
-                            </li>
-                        </ul>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="plans__grid__item__button">Use
-                            Now</a>
-                    </div>
-                    <div class="plans__grid__item slide">
-                        <i class="plans__grid__item__icon fa fa-users"></i>
-                        <h2 class="plans__grid__item__title">Business</h2>
-                        <h1 class="plans__grid__item__price">
-                            <span class="plans__grid__item__price__sign">$</span>
-                            35
-                            <span class="plans__grid__item__price__unit">/per 5 rolls</span>
-                        </h1>
-                        <p class="plans__grid__item__desc">
-                            Perfectly meet all of your company's randomization needs. Give your company the edge in
-                            security.</p>
-                        <ul class="plans__grid__item__features">
-                            <li class="plans__grid__item__features__item">
-                                <i class="fa fa-check plans__grid__item__features__item__icon"></i>
-                                6 Shakes per roll
-                            </li>
-                            <li class="plans__grid__item__features__item">
-                                <i class="fa fa-check plans__grid__item__features__item__icon"></i>
-                                100/request per hour rate limit
-                            </li>
-                            <li class="plans__grid__item__features__item">
-                                <i class="fa fa-check plans__grid__item__features__item__icon"></i>
-                                Military grade randomization
-                            </li>
-                            <li class="plans__grid__item__features__item">
-                                <i class="fa fa-check plans__grid__item__features__item__icon"></i>
-                                API
-                            </li>
-                            <li class="plans__grid__item__features__item">
-                                <i class="fa fa-check plans__grid__item__features__item__icon"></i>
-                                Almost free!
-                            </li>
-                            <li class="plans__grid__item__features__item">
-                                <i class="fa fa-check plans__grid__item__features__item__icon"></i>
-                                Free cake
-                            </li>
-                            <li class="plans__grid__item__features__item">
-                                <i class="fa fa-times plans__grid__item__features__item__icon"></i>
-                                Free ducks
-                            </li>
-                        </ul>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="plans__grid__item__button">Buy
-                            Now</a>
-                    </div>
-                    <div class="plans__grid__item slide">
-                        <i class="plans__grid__item__icon fa fa-building"></i>
-                        <h2 class="plans__grid__item__title">Enterprise</h2>
-                        <h1 class="plans__grid__item__price">
-                            <span class="plans__grid__item__price__sign">$</span>
-                            <span style="background-color: black; color: black;">420.69</span>
-                            <span class="plans__grid__item__price__unit">/month</span>
-                        </h1>
-                        <p class="plans__grid__item__desc">Great for large organizations that need lots of highly secure
-                            military grade randomization. </p>
-                        <ul class="plans__grid__item__features">
-                            <li class="plans__grid__item__features__item">
-                                <i class="fa fa-check plans__grid__item__features__item__icon"></i>
-                                12 Shakes for high security
-                            </li>
-                            <li class="plans__grid__item__features__item">
-                                <i class="fa fa-check plans__grid__item__features__item__icon"></i>
-                                No rate limit
-                            </li>
-                            <li class="plans__grid__item__features__item">
-                                <i class="fa fa-check plans__grid__item__features__item__icon"></i>
-                                Military grade randomization
-                            </li>
-                            <li class="plans__grid__item__features__item">
-                                <i class="fa fa-check plans__grid__item__features__item__icon"></i>
-                                API
-                            </li>
-                            <li class="plans__grid__item__features__item">
-                                <i class="fa fa-check plans__grid__item__features__item__icon"></i>
-                                Uhh yeah... freeish
-                            </li>
-                            <li class="plans__grid__item__features__item">
-                                <i class="fa fa-check plans__grid__item__features__item__icon"></i>
-                                Free cake
-                            </li>
-                            <li class="plans__grid__item__features__item">
-                                <i class="fa fa-check plans__grid__item__features__item__icon"></i>
-                                Free ducks
-                            </li>
-                        </ul>
-                        <a href="javascript: alert('Sorry you are too poor. go buy ducks instead.')"
-                           class="plans__grid__item__button">Learn More</a>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
-    <footer class="footer">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave wave--footer">
-            <path fill="#0c60ce" fill-opacity="1"
-                  d="M0,288L48,256C96,224,192,160,288,144C384,128,480,160,576,186.7C672,213,768,235,864,224C960,213,1056,171,1152,160C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
-        <div class="footer__content">
-            <img class="footer__content__logo" src="https://qrls.host.qrl.nz/img/logo-text.svg" alt="QRL" width="200"
-                 height="200">
+</div>
+<div class="features">
+    <div class="feature">
+        <i class="feature__icon fa fa-dice"></i>
+        <h2 class="feature__name">Powerful Random</h2>
+        <p class="feature__text">
+            With our powerful, highly complex, dedicated True-Random algorithm you can
+            always ensure you are getting unique random numbers.
+        </p>
+    </div>
+    <div class="feature">
+        <i class="feature__icon fa fa-network-wired"></i>
+        <h2 class="feature__name">Easy API</h2>
+        <p class="feature__text">
+            With our easy to use, fast and always running API you can spend more time getting
+            your algorithms and security out there to your clients!
+        </p>
+    </div>
+    <div class="feature">
+        <i class="feature__icon fa fa-key"></i>
+        <h2 class="feature__name">Secure</h2>
+        <p class="feature__text">
+            We pride ourselves on providing you with the most secure and truly random numbers
+            that we achieve by rolling the dice in house!
+        </p>
+    </div>
+</div>
+<div class="api">
+    <div class="api__message">
+        <h1 class="api__message__title">API</h1>
+        <p class="api__message__body">
+            <b>TrueRandom</b> has a powerful backend API which you can use to directly query
+            numbers from our service we keep a store of numbers ready for you to make sure you
+            get your random numbers when you need them most.
+        </p>
+    </div>
+    <div class="api__request">
+        <div class="api__request__head">
+            <span class="api__request__head__method">GET</span>
+            <span class="api__request__head__url"><span
+                    class="api__request__head__url__stub">https://truerandom.ml</span>/api/random</span>
         </div>
-    </footer>
-
-    <script>
-
-        function slide() {
-            const slideNodes = document.querySelectorAll('.slide:not(.slide--in)');
-            let delay = 50;
-            for (let i = 0; i < slideNodes.length; i++) {
-                const node = slideNodes[i];
-                if (onScreen(node)) {
-                    setTimeout(() => {
-                        node.classList.add('slide--in');
-                    }, delay);
-                    delay += 250;
-                }
-            }
-        }
-
-        function onScreen(element) {
-            const elementTop = element.offsetTop;
-            const elementHeight = element.offsetHeight;
-            const elementSize = elementTop + elementHeight / 2
-            const screenHeight = window.innerHeight;
-            const screenScroll = window.scrollY;
-            return (elementSize >= screenScroll && elementSize <= screenHeight + screenScroll)
-        }
-
-        window.onscroll = () => slide();
-        slide();
-
-    </script>
-</main>
+        <div class="api__request__response">
+            <div class="api__request__response__head">
+                <span class="api__request__response__head__title">JSON</span>
+                <span class="api__request__response__head__code">200</span>
+            </div>
+            <pre class="api__request__response__body"><code class="code">
+<span class="code__brace">{</span>
+  <span class="code__string">"response"</span>: <span class="code__number">3</span>
+<span class="code__brace">}</span>
+</code></pre>
+        </div>
+    </div>
+</div>
+<div class="plans">
+    <div class="plan">
+        <i class="plan__icon fa fa-user"></i>
+        <h2 class="plan__name">Personal</h2>
+        <div class="plan__price">
+            <span class="plan__price__amount">Free</span>
+        </div>
+        <p class="plan__text">Ideal for small personal projects or situations where you don't need to access large
+            amount of random numbers</p>
+        <ul class="plan__features">
+            <li class="plan__features__item"><i class="fa fa-check"></i>2 Shakes per roll</li>
+            <li class="plan__features__item"><i class="fa fa-check"></i>5 Requests/hour</li>
+            <li class="plan__features__item"><i class="fa fa-check"></i>Military Grade Randomization</li>
+            <li class="plan__features__item"><i class="fa fa-check"></i>Access to API</li>
+            <li class="plan__features__item"><i class="fa fa-check"></i>Free!</li>
+            <li class="plan__features__item"><i class="fa fa-times"></i>Free Cake</li>
+            <li class="plan__features__item"><i class="fa fa-times"></i>Free ducks</li>
+        </ul>
+        <a class="plan__buy" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" rel="noreferrer">Use Now</a>
+    </div>
+    <div class="plan">
+        <i class="plan__icon fa fa-users"></i>
+        <h2 class="plan__name">Business</h2>
+        <div class="plan__price">
+            <span class="plan__price__sign">$</span>
+            <span class="plan__price__amount">35</span>
+            <span class="plan__price__unit">/per 5 rolls</span>
+        </div>
+        <p class="plan__text">
+            Perfectly meet all of your company's randomization needs. Give your company the edge in security.
+        </p>
+        <ul class="plan__features">
+            <li class="plan__features__item"><i class="fa fa-check"></i>6 Shakes per roll</li>
+            <li class="plan__features__item"><i class="fa fa-check"></i>100 Requests/hour</li>
+            <li class="plan__features__item"><i class="fa fa-check"></i>Military Grade Randomization</li>
+            <li class="plan__features__item"><i class="fa fa-check"></i>Access to API</li>
+            <li class="plan__features__item"><i class="fa fa-check"></i>Almost Free!</li>
+            <li class="plan__features__item"><i class="fa fa-check"></i>Free Cake</li>
+            <li class="plan__features__item"><i class="fa fa-times"></i>Free ducks</li>
+        </ul>
+        <a class="plan__buy" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" rel="noreferrer">Buy Now</a>
+    </div>
+    <div class="plan">
+        <i class="plan__icon fa fa-building"></i>
+        <h2 class="plan__name">Enterprise</h2>
+        <div class="plan__price">
+            <span class="plan__price__sign">$</span>
+            <span class="plan__price__amount redacted">420.69</span>
+            <span class="plan__price__unit">/month</span>
+        </div>
+        <p class="plan__text">
+            Great for large organizations that need lots of highly secure military grade randomization.
+            We can meet all your needs.
+        </p>
+        <ul class="plan__features">
+            <li class="plan__features__item"><i class="fa fa-check"></i>12 Shakes for extra security</li>
+            <li class="plan__features__item"><i class="fa fa-check"></i>No Request Limit</li>
+            <li class="plan__features__item"><i class="fa fa-check"></i>Military Grade Randomization</li>
+            <li class="plan__features__item"><i class="fa fa-check"></i>Access to API</li>
+            <li class="plan__features__item"><i class="fa fa-check"></i>Uhh yeah... freeish</li>
+            <li class="plan__features__item"><i class="fa fa-check"></i>Free Cake</li>
+            <li class="plan__features__item"><i class="fa fa-check"></i>Free ducks</li>
+        </ul>
+        <a class="plan__buy" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" rel="noreferrer">Learn More</a>
+    </div>
+</div>
+<footer class="footer">
+    <p class="footer__text">Service Provided By</p>
+    <img class="footer__logo" src="https://qrls.host.qrl.nz/img/logo-text.svg" alt="QRL" width="200"
+         height="200">
+</footer>
 </body>
 </html>
