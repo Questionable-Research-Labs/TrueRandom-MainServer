@@ -97,6 +97,7 @@ body {
   justify-content: center;
   padding: 5vh 5vw 15vh;
   gap: 5rem;
+  flex-wrap: wrap;
 }
 .api__message {
   max-width: 600px;
@@ -106,7 +107,7 @@ body {
   margin-bottom: 0.8rem;
 }
 .api__message__body {
-  line-height: 1.7;
+  line-height: 2;
 }
 .api__request {
   width: 100%;
@@ -119,6 +120,8 @@ body {
   align-items: center;
   gap: 1rem;
   margin-bottom: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .api__request__head__method {
   font-size: 1.25rem;

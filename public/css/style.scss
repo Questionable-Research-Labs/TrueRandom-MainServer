@@ -116,6 +116,7 @@ body {
   justify-content: center;
   padding: 5vh 5vw 15vh;
   gap: 5rem;
+  flex-wrap: wrap;
 
   &__message {
     max-width: 600px;
@@ -126,7 +127,7 @@ body {
     }
 
     &__body {
-      line-height: 1.7;
+      line-height: 2;
     }
   }
 
@@ -141,6 +142,8 @@ body {
       align-items: center;
       gap: 1rem;
       margin-bottom: 1em;
+      overflow: hidden;
+      text-overflow: ellipsis;
 
       &__method {
         font-size: 1.25rem;
@@ -268,7 +271,7 @@ body {
       margin-bottom: 0.8rem;
     }
 
-    &__price  {
+    &__price {
 
       &__sign {
         font-size: 1.25rem;
@@ -322,9 +325,11 @@ body {
   justify-content: center;
   flex-flow: column;
   align-items: center;
+
   &__logo {
     margin: 1em 0;
   }
+
   &__text {
     color: #555;
   }
